@@ -1,0 +1,68 @@
+.order-main-box {
+    -webkit-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+}
+
+.product-box-orders {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid 0.5px rgb(175, 142, 142);
+}
+.order-image-box{
+    height: 80px;
+    width: 80px;
+}
+
+.mainsimage {
+    height: 100% ;
+    width: 100% ;
+}
+
+.orderdetail-link {
+    text-decoration: none;
+    color: white;
+}
+
+.orderdetail-link:hover {
+    color: white;
+}
+
+.order-detail-btn {
+    box-shadow: none !important;
+    border: none;
+    background-color: rgb(129, 129, 235);
+}
+
+.detail-product-box {
+    background-color: rgba(226, 226, 233, 0.247);
+    border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+}
+
+.shipping-address-detail {
+    background-color: rgba(226, 226, 233, 0.247);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+
+}
+
+.order-detail {
+    background-color: rgba(226, 226, 233, 0.247);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+    box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.29);
+
+}

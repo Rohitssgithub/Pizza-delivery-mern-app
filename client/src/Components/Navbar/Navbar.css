@@ -1,0 +1,190 @@
+/* .fa-cart-shopping {
+  font-size: 25px !important;
+}
+
+.carts {
+  position: relative;
+}
+
+.cartspan {
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 10px;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: 0;
+  background-color: white;
+}  */
+.navimageprofile {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+}
+
+.navimageprofile img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.cart-trolley-link {
+    position: relative;
+}
+
+.cart-trolley {
+    font-size: 25px;
+    position: relative;
+    color: brown;
+}
+
+.cart-total-item {
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: white;
+    /* color: white; */
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -22%;
+    right: -15%;
+}
+
+.Mainheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 20px;
+    background-color: rgb(240, 237, 237);
+}
+
+.headerimage {
+    width: 20%;
+    padding: 10px 0;
+    font-family: italic;
+    font-family: "Sofia", sans-serif;
+}
+
+.headerimage img {
+    height: 65px;
+    width: 100px;
+}
+
+.navbar-link {
+    text-decoration: none;
+}
+
+.navbar-lists {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 17px;
+}
+
+.open-nav {
+    display: none;
+}
+
+.open-nav button {
+    padding: 0 7px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.linknavbar{
+    color: orange !important;
+}
+
+.close-nav {
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.navbar-link{
+    color: brown;
+}
+
+
+@media screen and (max-width:1024px) {
+    .open-nav {
+        display: block;
+    }
+
+    .navbars {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        background-color: rgba(78, 97, 239, 0.718);
+        width: 0vw;
+        margin-top: 0;
+        transition: all 0.7s;
+    }
+
+    .active.navbars {
+        width: 100vw;
+    }
+
+    .navul {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        overflow: scroll;
+        height: 100vh;
+        background-color: rgba(103, 22, 202, 0.847);
+        margin-top: 0;
+        transition: all 0.5s;
+        justify-content: center;
+    }
+
+    .navbar-lists {
+        flex-direction: column;
+        font-weight: 500;
+        align-items: center;
+    }
+
+    .navbar-link {
+        color: white;
+    }
+
+    .close-nav {
+        visibility: visible;
+
+    }
+
+    .Mainheader {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .headerimage {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .navul {
+        width: 72%;
+    }
+
+}

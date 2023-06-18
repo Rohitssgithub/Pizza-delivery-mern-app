@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.cart-image {
+    height: 150px;
+    width: 150px;
+}
+
+.delete-icon {
+    font-size: 25px !important;
+    color: red;
+}
+
+.main-cart img {
+    height: 100px;
+    width: 100px;
+}
+
+p {
+    line-height: 15px;
+}
+
+.empty-cart-data {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.empty-cart-data h1 {
+    color: red;
+    font-family: 'Muli', sans-serif;
+}
+
+.cart-image-blank {
+    width: 100%;
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://img.freepik.com/premium-vector/young-man-standing-with-shopping-cart-he-holding-paper-list-mall-supermarket_1150-51048.jpg?w=996);
+}
+
+.shop-link {
+    color: red;
+    text-decoration: none;
+}
+
+@media screen and (max-width:430px) {
+    .empty-cart-data {
+        width: 80%;
+    }
+  }
+  
+  

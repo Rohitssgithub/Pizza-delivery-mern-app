@@ -1,0 +1,66 @@
+.footersec {
+    background: #35322d;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.iconssec a {
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    background-color: #46423b;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+    transition: 0.5s;
+}
+
+.iconssec a:hover {
+    background-color: #ffb03b;
+}
+
+.footersec h1 {
+    color: #ffb03b;
+    font-size: 36px;
+    font-family: "Satisfy", sans-serif;
+    font-weight: 500;
+}
+
+.footersec p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.iconssec {
+    margin: 30px 0;
+}
+
+.footersec span {
+    color: #ff9b08;
+}
+
+@media screen and (min-width:320px) and (max-width:430px) {
+    .footersec h1 {
+        font-size: 30px;
+    }
+
+    .footersec p {
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .iconssec {
+        margin: 30px 0;
+    }
+
+    .footersec {
+        padding: 20px 0;
+    }
+}

@@ -1,0 +1,37 @@
+.register-btn button {
+    height: 100%;
+    width: 100%;
+}
+
+.main-regiter-form {
+    border-radius: 5px;
+    width: 80%;
+    padding: 20px 0;
+    -webkit-box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
+    background-image: linear-gradient(to right bottom, #d6cbea, #b6a1da, #9679c8, #7651b6, #5427a3);
+}
+
+.regiter-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.genders {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:425px) {
+    .main-regiter-form {
+        width: 100%;
+    }
+}
+@media screen and (max-width:770px) {
+    .main-regiter-form {
+        width: 100%;
+    }
+}

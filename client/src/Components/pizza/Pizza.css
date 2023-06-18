@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+}
+
+
+
+img {
+    height: 180px;
+    width: 180px;
+}
+.image-pizza{
+    cursor: pointer;
+}
