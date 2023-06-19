@@ -23,10 +23,10 @@ const Home = () => {
 
     const toggleVisible = () => {
         const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300) {
+        if (scrolled > 250) {
             setVisible(true)
         }
-        else if (scrolled <= 300) {
+        else if (scrolled <= 250) {
             setVisible(false)
         }
     };
@@ -65,7 +65,7 @@ const Home = () => {
 
             {
                 visible ?
-                    <BsFillArrowUpCircleFill className='jdssjn' onClick={gotoTop} />
+                    <BsFillArrowUpCircleFill className='scroll-top-icon' onClick={gotoTop} />
                     : ''
             }
         </>
