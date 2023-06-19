@@ -28,37 +28,7 @@ const NavBar = () => {
         dispatch(getcart(loginUser._id))
     }, [loginUser])
 
-    // let [currentUsers, setCurrentUser] = useState()
-    // const callaboutpage = async () => {
-    //     try {
-    //         const res = await fetch('http://localhost:9300/about', {
-    //             method: 'GET',
-    //             mode: 'cors',
-    //             headers: {
-    //                 Accept: 'application/json',
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             credentials: 'include'
-    //         })
-    //         const data = await res.json()
-    //         console.log(data)
-    //         if (res.status === 401) {
-    //             // navigate('/login')
-    //             setCurrentUser(null)
-    //             // navigate('/')
-    //         }
-    //         else {
-    //             setCurrentUser(data)
-    //             // navigate('/')
-    //         }
-    //     }
-    //     catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-
     useEffect(() => {
-        // callaboutpage()
         dispatch(fetchLoginUser())
     }, [])
 
@@ -79,8 +49,8 @@ const NavBar = () => {
                                             </div>
                                             <ul className="dropdown-menu im" aria-labelledby="dropdownMenuButton1">
                                                 <Link className="dropdown-item" to={`/Profile/${loginUser._id}`} onClick={() => setMenuIcon(false)}>Profile</Link>
-                                                <Link className="dropdown-item" to="/logout" onClick={() => setMenuIcon(false)}>logout</Link>
                                                 <Link className="dropdown-item" to="/order" onClick={() => setMenuIcon(false)}>order</Link>
+                                                <Link className="dropdown-item" to="/logout" onClick={() => setMenuIcon(false)}>logout</Link>
 
                                             </ul>
                                         </div>
