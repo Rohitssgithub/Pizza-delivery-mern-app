@@ -51,7 +51,6 @@ const NavBar = () => {
                                                 <Link className="dropdown-item" to={`/Profile/${loginUser._id}`} onClick={() => setMenuIcon(false)}>Profile</Link>
                                                 <Link className="dropdown-item" to="/order" onClick={() => setMenuIcon(false)}>order</Link>
                                                 <Link className="dropdown-item" to="/logout" onClick={() => setMenuIcon(false)}>logout</Link>
-
                                             </ul>
                                         </div>
                                     </>
