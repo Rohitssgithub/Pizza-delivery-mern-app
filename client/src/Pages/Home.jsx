@@ -5,6 +5,8 @@ import { fetchAllPizza } from '../reducers/PizzReducer';
 import Loading from '../Components/Loading/Loading';
 import FilterBurgers from '../Components/FilterPizza';
 import ErrorComponent from '../Components/ErrorComponent/ErrorComponent';
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+
 
 const Home = () => {
     let dispatch = useDispatch()
@@ -16,6 +18,26 @@ const Home = () => {
     useEffect(() => {
         dispatch(fetchAllPizza())
     }, [])
+
+    const [visible, setVisible] = useState(false)
+
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 300) {
+            setVisible(true)
+        }
+        else if (scrolled <= 300) {
+            setVisible(false)
+        }
+    };
+
+    const gotoTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    window.addEventListener('scroll', toggleVisible);
     return (
         <>
             <div className='container pizza-container p-2'>
@@ -39,6 +61,13 @@ const Home = () => {
                     }
                 </div>
             </div>
+
+
+            {
+                visible ?
+                    <BsFillArrowUpCircleFill className='jdssjn' onClick={gotoTop} />
+                    : ''
+            }
         </>
     )
 }
