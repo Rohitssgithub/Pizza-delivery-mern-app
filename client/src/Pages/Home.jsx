@@ -18,10 +18,10 @@ const Home = () => {
     }, [])
     return (
         <>
-            <div className='container pizza-container'>
+            <div className='container pizza-container p-2'>
                 <FilterBurgers></FilterBurgers>
 
-                <div className='row text-center'>
+                <div className='row text-center justify-content-center m-0 p-0'>
                     {loading && <Loading />}
                     {
                         error && <ErrorComponent error='Something went wrong' />

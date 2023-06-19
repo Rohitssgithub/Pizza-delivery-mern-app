@@ -35,3 +35,10 @@
         width: 100%;
     }
 }
+
+
+@media screen and (max-width:430px) {
+    .regiter-box {
+        margin-top: 150px;
+    }
+}

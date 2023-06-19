@@ -31,7 +31,7 @@ const Login = () => {
     <>
       <div className='container login-box text-center'>
         <h3 className='mb-4'>Login Here</h3>
-        <div className='row main-row justify-content-center'>
+        <div className='row main-row justify-content-center m-0 p-0'>
           <form className='col-lg-4 col-md-5 col-10 main-form'>
             <div class="form-floating mb-3">
               <input type="email" name="email" value={data.email} onChange={onchangeans} class="form-control" id="floatingInput" placeholder="name@example.com" />

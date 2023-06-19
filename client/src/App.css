@@ -132,3 +132,15 @@ th {
   }
 }
 
+.filter-box{
+  padding: 20px 0 !important;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width:430px) {
+  .filter-box {
+    margin: 0;
+    padding: 0;
+  }
+
+}

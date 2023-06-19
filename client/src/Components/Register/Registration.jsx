@@ -53,25 +53,6 @@ const Registration = () => {
 
     return (
         <>
-            {/* <h1>Register </h1>
-            <form method='POST'>
-                <input type="text" name='username' placeholder='name' value={adddata.username} onChange={handleOnChange} />
-                <input type="email" name='email' placeholder='email' value={adddata.email} onChange={handleOnChange} />
-                <input type="number" name='age' placeholder='age' value={adddata.age} onChange={handleOnChange} />
-
-                <div className='d-flex'>
-                    <input type="radio" name='gender' value='female' onChange={handleOnChange} />female
-                    <input type="radio" name='gender' value='male' onChange={handleOnChange} />male
-                    <input type="radio" name='gender' value='other' onChange={handleOnChange} />other
-                </div>
-
-                <input type="number" name='contact' placeholder='contact' value={adddata.contact} onChange={handleOnChange} />
-                <input type="file" name='image' onChange={handleFileChange} />
-                <input type="password" name='password' placeholder='password' value={adddata.password} onChange={handleOnChange} />
-                <input type="password" name='confirmPassword' placeholder='confirmPassword' value={adddata.confirmPassword} onChange={handleOnChange} />
-                <button onClick={handlesubmitdata}>create</button>
-            </form>
-            <Link to='/login'>all ready user go to login</Link> */}
             <div className='container regiter-box text-center d-flex align-items-center flex-column'>
                 <h3 className='mb-4'>Login Here</h3>
                 <form className='row justify-content-center main-regiter-form' onSubmit={handlesubmitdata}>

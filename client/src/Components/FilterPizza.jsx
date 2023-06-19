@@ -41,8 +41,8 @@ const FilterBurgers = () => {
         )))
     }, [search, category])
     return (
-        <div className="container">
-            <form className="row justify-content-center align-items-center shadow p-3 mb-4 bg-white rounded ">
+        <div className="container m-0 p-0  mb-3">
+            <form className="row justify-content-center m-0 py-3 align-items-center shadow  bg-white rounded filter-box">
                 <div className="col-md-3 mt-2">
                     <input value={search} className="form-control" type="text" onChange={getfilterPizza} placeholder="Search Fat-Burgers"></input>
                 </div>

@@ -38,7 +38,7 @@ const Cart = () => {
                         </div>
                         :
                         <>
-                            <div className='row justify-content-center cart-box gy-2'>
+                            <div className='row justify-content-center cart-box gy-2 m-0 p-0'>
                                 <p>Total products:{cartproducts.length}</p>
 
                                 {
@@ -52,7 +52,7 @@ const Cart = () => {
                                 }
                             </div>
                             <div className='container mt-5'>
-                                <div className='row justify-content-center'>
+                                <div className='row justify-content-center m-0 p-0'>
                                     <div className="col-lg-4 col-md-8 col-11">
                                         <div className="card mb-4">
                                             <div className="card-header py-3">
