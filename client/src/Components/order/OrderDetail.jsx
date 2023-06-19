@@ -39,7 +39,7 @@ const OrderDetail = () => {
     return (
         <>
             <div className='container'>
-                <div className='row'>
+                <div className='row m-0 p-0'>
                     <div className='col-lg-8 product-box-order'>
                         {
                             arrayValues.map((ele) => {
