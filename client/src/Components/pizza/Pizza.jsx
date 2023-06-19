@@ -68,7 +68,7 @@ const Pizza = ({ pizza }) => {
           </div>
           <div className='m-1 w-100'>
             {
-              loginUser ? <button className='btn btn-primary' onClick={() => {
+              loginUser ? <button className='btn btn-primary add-tocart-btn' onClick={() => {
                 dispatch(addcart({ name: pizza.name, price: pizza.prices[0][varient] * quantity, quantity: quantity, userID: loginUser._id, image: pizza.image, productID: pizza._id, variants: varient }))
               }}>ADD TO CART</button>
                 :
