@@ -7,6 +7,7 @@ import { getcart } from '../../reducers/CartReducer';
 import { MDBBadge, MDBIcon, MDBBtn } from 'mdb-react-ui-kit';
 import { FiShoppingCart } from 'react-icons/fi';
 import './Navbar.css'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -42,7 +43,7 @@ const NavBar = () => {
     };
     window.addEventListener('scroll', changeNavbarColor);
 
-  
+
 
 
     return (
@@ -52,37 +53,46 @@ const NavBar = () => {
                 <div className={menuIcon ? "navbars active" : "navbars"}>
                     <div className="navul">
                         <ul className="navbar-lists">
+                            <li>
+                                <NavLink
+                                    to="/"
+                                    className="navbar-link"
+                                    onClick={() => setMenuIcon(false)}>
+                                    Home
+                                </NavLink>
+                            </li>
                             {
                                 text == 'logged in' ?
                                     <>
+
                                         <div className="dropdown">
                                             <div className=" navimageprofile dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <img src={"http://localhost:9300/" + loginUser.image} alt="" />
                                             </div>
                                             <ul className="dropdown-menu im" aria-labelledby="dropdownMenuButton1">
-                                                <Link className="dropdown-item livelink" to={`/Profile/${loginUser._id}`} onClick={() => setMenuIcon(false)}>Profile</Link>
-                                                <Link className="dropdown-item" to="/order" onClick={() => setMenuIcon(false)}>order</Link>
-                                                <Link className="dropdown-item" to="/logout" onClick={() => setMenuIcon(false)}>logout</Link>
+                                                <NavLink className="dropdown-item" to={`/Profile/${loginUser._id}`} onClick={() => setMenuIcon(false)}>Profile</NavLink>
+                                                <NavLink className="dropdown-item" to="/order" onClick={() => setMenuIcon(false)}>order</NavLink>
+                                                <NavLink className="dropdown-item" to="/logout" onClick={() => setMenuIcon(false)}>logout</NavLink>
                                             </ul>
                                         </div>
                                     </>
                                     :
                                     <>
                                         <li>
-                                            <Link
+                                            <NavLink
                                                 to="/login"
-                                                className="navbar-link livelink"
+                                                className="navbar-link"
                                                 onClick={() => setMenuIcon(false)}>
                                                 Login
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                         <li>
-                                            <Link
+                                            <NavLink
                                                 to="/registration"
                                                 className="navbar-link"
                                                 onClick={() => setMenuIcon(false)}>
                                                 Register
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     </>
                             }

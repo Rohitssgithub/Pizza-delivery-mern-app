@@ -174,14 +174,27 @@
 
 }
 
+/* 
 .livelink {
     background-color: red;
     padding: 4px 7px;
     border-radius: 50px;
     display: grid;
     align-items: center;
-}
+} */
 
 .scrollcolor {
     background-color: rgb(150, 151, 155);
+}
+
+.active {
+    background-color: red;
+    padding: 4px 17px;
+    border-radius: 50px;
+    display: grid;
+    align-items: center;
+    color: white;
+}
+.active:hover{
+    color: white !important;
 }
