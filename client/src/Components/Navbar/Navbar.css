@@ -1,6 +1,8 @@
-.Mainheader{
+.Mainheader {
     z-index: 5 !important;
+    transition: all 0.3s;
 }
+
 .navimageprofile {
     border-radius: 50%;
     overflow: hidden;
@@ -87,7 +89,8 @@
     border: none;
     cursor: pointer;
 }
-.linknavbar{
+
+.linknavbar {
     color: orange !important;
 }
 
@@ -100,7 +103,8 @@
     border: none;
     cursor: pointer;
 }
-.navbar-link{
+
+.navbar-link {
     color: brown;
 }
 
@@ -168,4 +172,15 @@
         width: 72%;
     }
 
+}
+
+.livelink {
+    background-color: red;
+    padding: 4px 7px;
+    border-radius: 50px;
+    display: grid;
+    align-items: center;
+}
+.min{
+    background-color: rgb(150, 151, 155);
 }

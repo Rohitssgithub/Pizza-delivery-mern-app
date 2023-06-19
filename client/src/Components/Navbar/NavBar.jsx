@@ -14,7 +14,6 @@ const NavBar = () => {
     let dispatch = useDispatch()
     const [menuIcon, setMenuIcon] = useState();
 
-
     let { loginUser } = useSelector((state) => state.users)
     // console.log(loginUser)
 
@@ -32,10 +31,21 @@ const NavBar = () => {
         dispatch(fetchLoginUser())
     }, [])
 
+    const [colorChange, setColorchange] = useState(false);
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 50) {
+            setColorchange(true);
+        }
+        else {
+            setColorchange(false);
+        }
+    };
+    window.addEventListener('scroll', changeNavbarColor);
+
 
     return (
         <>
-            <nav className="Mainheader">
+            <nav className={colorChange ? 'Mainheader min' : 'Mainheader'}>
                 <h2 className='headerimage'><Link to='/' className='linknavbar'>Yummy Pizza</Link></h2>
                 <div className={menuIcon ? "navbars active" : "navbars"}>
                     <div className="navul">
@@ -48,7 +58,7 @@ const NavBar = () => {
                                                 <img src={"http://localhost:9300/" + loginUser.image} alt="" />
                                             </div>
                                             <ul className="dropdown-menu im" aria-labelledby="dropdownMenuButton1">
-                                                <Link className="dropdown-item" to={`/Profile/${loginUser._id}`} onClick={() => setMenuIcon(false)}>Profile</Link>
+                                                <Link className="dropdown-item livelink" to={`/Profile/${loginUser._id}`} onClick={() => setMenuIcon(false)}>Profile</Link>
                                                 <Link className="dropdown-item" to="/order" onClick={() => setMenuIcon(false)}>order</Link>
                                                 <Link className="dropdown-item" to="/logout" onClick={() => setMenuIcon(false)}>logout</Link>
                                             </ul>
@@ -59,7 +69,7 @@ const NavBar = () => {
                                         <li>
                                             <Link
                                                 to="/login"
-                                                className="navbar-link"
+                                                className="navbar-link livelink"
                                                 onClick={() => setMenuIcon(false)}>
                                                 Login
                                             </Link>
