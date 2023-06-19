@@ -1,14 +1,8 @@
-.profile-box {
-    width: 70%;
+.profile-div {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
-    box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
-    background-image: linear-gradient(to right bottom, #d6cbea, #b6a1da, #9679c8, #7651b6, #5427a3);
-
 }
 
 .image-section {
@@ -34,6 +28,15 @@
     width: 100%;
 }
 
+.update-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px !important;
+    border: solid yellow;
+}
+
 .update-profile-box {
     border-radius: 5px;
     width: 80%;
@@ -44,11 +47,15 @@
     background-image: linear-gradient(to right bottom, #d6cbea, #b6a1da, #9679c8, #7651b6, #5427a3);
 }
 
-.update-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+
+.profile-box {
+    width: 70%;
+    -webkit-box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.41);
+    background-image: linear-gradient(to right bottom, #d6cbea, #b6a1da, #9679c8, #7651b6, #5427a3);
+
 }
 
 @media screen and (max-width:430px) {
@@ -66,8 +73,26 @@
     }
 }
 
+
 @media screen and (max-width:770px) {
     .update-profile-box {
         width: 100%;
     }
+
+    .profile-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .update-box {
+        margin-top: 150px;
+        padding: 14px !important;
+    }
+
+    .profile-box {
+        margin-top: 40px !important;
+    }
+
+
 }

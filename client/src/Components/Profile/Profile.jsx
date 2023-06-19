@@ -87,36 +87,6 @@ const Profile = () => {
 
     return (
         <>
-            {/* {
-                update ?
-                    <>
-                        <form onSubmit={updateData}>
-                            <input type="text" name='username' value={userData && userData.username} onChange={handles} />
-                            <input type="email" name='email' value={userData && userData.email} onChange={handles} />
-                            <input type="number" name='age' value={userData && userData.age} onChange={handles} />
-                            <input type="text" name='gender' value={userData && userData.gender} onChange={handles} />
-                            <input type="text" name='gender' value={userData && userData.contact} onChange={handles} /> */}
-            {/* <input type="text" name='gender' value={userData && userData.password} onChange={handles} /> */}
-            {/* <input type="file" name='image' onChange={userData && handleFileChange} />
-                            <button>update and save</button>
-                            <button onClick={() => setUpdate(false)}>go back</button>
-                        </form>
-                    </>
-                    :
-                    <>
-                        <p>name:{userData.username}</p>
-                        <p>email:{userData.email}</p>
-                        <p>age:{userData.age}</p>
-                        <p>gender:{userData.gender}</p>
-                        <p>contact:{userData.contact}</p>
-                        image: */}
-            {/* <img src={"http://localhost:9300/" + userData.image} alt="" /> */}
-            {/* <p>password:{userData.password}</p> */}
-            {/* <button onClick={() => setUpdate(true)}>update</button> */}
-            {/* </>
-            }
-
-            <button onClick={() => deleteAccount(userData._id)}>Delete Account</button> */}
             {
                 update ?
                     <>
@@ -181,36 +151,30 @@ const Profile = () => {
                         </div>
                     </>
                     :
-                    <>
-                        <div className='container d-flex justify-content-center'>
-                            <div className='row profile-box justify-content-center '>
-                                <div className='col-md-5 col-10 image-section d-flex flex-column align-items-center justify-content-center'>
-                                    <div className='imagedivs'>
-                                        <img src={"http://localhost:9300/" + userData.image} className='profile-img' alt="" />
-                                    </div>
-                                    <p className='mt-3'><strong>{userData.username}</strong></p>
+                    <div className='container profile-div text-center d-flex align-items-center justify-content-center p-3'>
+                        <div className='row justify-content-center  profile-box p-2'>
+                            <div className='col-md-5 col-10 image-section d-flex flex-column align-items-center justify-content-center'>
+                                <div className='imagedivs'>
+                                    <img src={"http://localhost:9300/" + userData.image} className='profile-img' alt="" />
                                 </div>
-                                <div className='col-md-7 col-10 info-section'>
-                                    <p>Name : {userData.username}</p>
-                                    <p>Email : {userData.email}</p>
-                                    <p>Age : {userData.age}</p>
-                                    <p>Gender : {userData.gender}</p>
-                                    <p>Contact : {userData.contact}</p>
-                                    <div>
-                                        <button className='btn btn-danger ' onClick={() => setUpdate(true)}>update</button>
-                                        <button className='btn btn-danger mx-2' onClick={() => deleteAccount(userData._id)}>Delete Account</button>
-                                    </div>
+                                <p className='mt-3'><strong>{userData.username}</strong></p>
+                            </div>
+                            <div className='col-md-7 col-10 info-section'>
+                                <p>Name : {userData.username}</p>
+                                <p>Email : {userData.email}</p>
+                                <p>Age : {userData.age}</p>
+                                <p>Gender : {userData.gender}</p>
+                                <p>Contact : {userData.contact}</p>
+                                <div>
+                                    <button className='btn btn-danger save-btn' onClick={() => setUpdate(true)}>update</button>
+                                    <button className='btn btn-danger mx-2' onClick={() => deleteAccount(userData._id)}>Delete Account</button>
+                                </div>
 
-                                </div>
                             </div>
                         </div>
-                    </>
+                    </div>
             }
-
-
         </>
-
-
     )
 }
 
