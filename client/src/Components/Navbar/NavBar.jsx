@@ -42,10 +42,12 @@ const NavBar = () => {
     };
     window.addEventListener('scroll', changeNavbarColor);
 
+  
+
 
     return (
         <>
-            <nav className={colorChange ? 'Mainheader min' : 'Mainheader'}>
+            <nav className={colorChange ? 'Mainheader scrollcolor' : 'Mainheader'}>
                 <h2 className='headerimage'><Link to='/' className='linknavbar'>Yummy Pizza</Link></h2>
                 <div className={menuIcon ? "navbars active" : "navbars"}>
                     <div className="navul">
