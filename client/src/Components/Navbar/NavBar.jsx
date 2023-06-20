@@ -43,9 +43,6 @@ const NavBar = () => {
     };
     window.addEventListener('scroll', changeNavbarColor);
 
-
-
-
     return (
         <>
             <nav className={colorChange ? 'Mainheader scrollcolor' : 'Mainheader'}>
