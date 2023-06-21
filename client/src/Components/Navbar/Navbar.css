@@ -61,12 +61,10 @@
     padding: 10px 0;
     font-family: italic;
     font-family: "Sofia", sans-serif;
+    color: orangered;
+
 }
 
-.headerimage img {
-    height: 65px;
-    width: 100px;
-}
 
 .navbar-link {
     text-decoration: none;
@@ -179,6 +177,7 @@
 
 .scrollcolor {
     background-color: rgb(150, 151, 155);
+    color: white ;
 }
 
 .active {

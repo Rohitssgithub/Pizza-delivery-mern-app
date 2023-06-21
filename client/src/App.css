@@ -154,3 +154,20 @@ th {
   cursor: pointer;
 }
 
+.admin-link{
+  margin-right: 20px;
+  color: black !important;
+}
+
+@media screen and (max-width:430px) {
+  .table {
+   font-size: 12px;
+  }
+}
+@media screen and (max-width:780px) {
+ 
+  .update-userlist-btn{
+    margin-bottom: 10px;
+  }
+
+}

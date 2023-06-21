@@ -140,7 +140,7 @@ export const deleteuser = createAsyncThunk("deleteuser", async (id, { rejectWith
     );
     try {
         const result = await response.json();
-        // console.log(result.user)
+        console.log(result.user)
         return result.user;
     } catch (error) {
         return rejectWithValue(error);

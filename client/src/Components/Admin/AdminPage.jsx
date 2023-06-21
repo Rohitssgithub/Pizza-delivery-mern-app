@@ -5,7 +5,9 @@ import { useEffect } from 'react';
 import UserList from './userList';
 import ShowAllPizza from './ShowAllPizza';
 import AllOrders from './AllOrders';
-
+import { NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import AdminNav from './AdminNav';
 
 const AdminPage = () => {
     let { loginUser } = useSelector((state) => state.users)
@@ -27,8 +29,8 @@ const AdminPage = () => {
     return (
         <>
             <div className="container mt-3" style={{ height: '100vh' }} >
-                <div className='row'>
-                    <ul className="tabs">
+                <div className='row p-0 m-0'>
+                    {/* <ul className="tabs">
                         <li
                             className={`tab col-2 ${activeTab === 0 ? "active rounded-pill" : ""}`}
                             onClick={() => handleClick(0)}
@@ -52,10 +54,13 @@ const AdminPage = () => {
                         {activeTab === 0 && <UserList />}
                         {activeTab === 1 && <ShowAllPizza />}
                         {activeTab === 2 && <AllOrders />}
-                    </div>
+                    </div> */}
+                    <AdminNav></AdminNav>
+                    <Outlet />
                 </div>
-
             </div>
+
+
 
         </>
     )

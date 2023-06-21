@@ -25,7 +25,9 @@ import Protected from './Components/Protected';
 import AddUser from './Components/Admin/AddUser';
 import Order from './Components/order/Order';
 import OrderDetail from './Components/order/OrderDetail';
-
+import AllOrders from './Components/Admin/AllOrders';
+import { Outlet } from 'react-router-dom';
+import AdminNav from './Components/Admin/AdminNav';
 const App = () => (
   <>
     <Router>
@@ -39,12 +41,18 @@ const App = () => (
             <Cart />
           </Protected>
         } />
-        <Route path='/admin'
-          element={
-            <ProtectAdmin>
-              <AdminPage />
-            </ProtectAdmin>
-          } />
+        <Route path='/admin' element={
+          <ProtectAdmin>
+            <AdminPage />
+          </ProtectAdmin>
+        }
+        >
+          <Route index element={<UserList />} />
+          <Route path='userlist' element={<UserList />} />
+          <Route path='allpizza' element={<ShowAllPizza />} />
+          <Route path='allorders' element={<AllOrders />} />
+
+        </Route>
         <Route path='/addpizza' element={
           <ProtectAdmin>
             <AddBurger />
@@ -52,16 +60,6 @@ const App = () => (
         } />
         <Route path='/Profile/:id' element={<Profile />} />
         <Route path='/logout' element={<Logout />} />
-        <Route path='/userlist' element={
-          <ProtectAdmin>
-            <UserList />
-          </ProtectAdmin>
-        } />
-        <Route path='/allpizza' element={
-          <ProtectAdmin>
-            <ShowAllPizza />
-          </ProtectAdmin>
-        } />
         <Route path='/edit/:id' element={
           <ProtectAdmin>
             <UpdateUser />
@@ -77,6 +75,7 @@ const App = () => (
             <AddUser />
           </ProtectAdmin>
         } />
+
         <Route path='/order' element={<Order />} />
         <Route path='/orderdetail/:id' element={<OrderDetail />} />
       </Routes>

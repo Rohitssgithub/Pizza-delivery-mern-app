@@ -144,7 +144,7 @@ const UpdateUser = () => {
                             update and save
                         </button>
                         <button className="btn btn-primary mx-lg-2 my-2">
-                            <Link className='link' to='/userlist'>Go back</Link>
+                            <Link className='link' to='/admin/userlist'>Go back</Link>
                         </button>
                     </div>
 

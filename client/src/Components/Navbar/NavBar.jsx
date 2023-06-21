@@ -46,7 +46,7 @@ const NavBar = () => {
     return (
         <>
             <nav className={colorChange ? 'Mainheader scrollcolor' : 'Mainheader'}>
-                <h2 className='headerimage'><Link to='/' className='linknavbar'>Yummy Pizza</Link></h2>
+                <h2 className='headerimage'>Yummy Pizza</h2>
                 <div className={menuIcon ? "navbars actives" : "navbars"}>
                     <div className="navul">
                         <ul className="navbar-lists">
@@ -56,6 +56,14 @@ const NavBar = () => {
                                     className="navbar-link"
                                     onClick={() => setMenuIcon(false)}>
                                     Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="/admin"
+                                    className="navbar-link"
+                                    onClick={() => setMenuIcon(false)}>
+                                    Admin
                                 </NavLink>
                             </li>
                             {
