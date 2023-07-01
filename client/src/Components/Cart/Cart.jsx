@@ -74,31 +74,15 @@ const Cart = () => {
                                                         </span>
                                                     </li>
                                                 </ul>
-
-                                                {/* <Link to='/'>
-                                    <button
-                                        type="button"
-                                        className="btn btn-primary btn-lg btn-block"
-                                    >
-                                        Go to checkout
-                                    </button>
-                                </Link> */}
                                                 <CheckOut total={total} cartproducts={cartproducts}></CheckOut>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </>
-
                 }
-
-
-
             </div>
-
-
         </>
     )
 }
