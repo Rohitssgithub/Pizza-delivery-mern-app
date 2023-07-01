@@ -21,12 +21,12 @@ export const registration = createAsyncThunk("addUser", async (formData, { rejec
     //     return rejectWithValue(error);
     // }
 
-    try {
-        const data = await axios.post('http://localhost:9300/user/signup', formData);
-        return data
-    } catch (error) {
-        return rejectWithValue(error);
-    }
+    // try {
+    const data = await axios.post('http://localhost:9300/user/signup', formData);
+    return data
+    // } catch (error) {
+    // return rejectWithValue(error);
+    // }
 }
 );
 

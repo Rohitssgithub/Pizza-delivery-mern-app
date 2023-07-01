@@ -48,7 +48,7 @@ const Registration = () => {
         console.log(uploadData)
 
         dispatch(registration(uploadData))
-        navigate('/login')
+        // navigate('/login')
     }
 
     return (
@@ -64,14 +64,14 @@ const Registration = () => {
                     </div>
                     <div className='col-md-5'>
                         <div className="form-floating mb-3">
-                            <input type="email" name='email' placeholder='email' value={adddata.email} onChange={handleOnChange} className="form-control" id="floatingPassword" />
-                            <label for="floatingPassword">Email</label>
+                            <input type="email" name='email' placeholder='email' value={adddata.email} onChange={handleOnChange} className="form-control" id="floatingemail" />
+                            <label for="floatingemail">Email</label>
                         </div>
                     </div>
                     <div className='col-md-5'>
                         <div className="form-floating mb-3">
-                            <input type="number" name='age' placeholder='age' value={adddata.age} onChange={handleOnChange} className="form-control" id="floatingPassword" />
-                            <label for="floatingPassword">Age</label>
+                            <input type="number" name='age' placeholder='age' value={adddata.age} onChange={handleOnChange} className="form-control" id="floatingage" />
+                            <label for="floatingage">Age</label>
                         </div>
                     </div>
                     <div className='col-md-5 genders'>
@@ -90,20 +90,20 @@ const Registration = () => {
                     </div>
                     <div className='col-md-5'>
                         <div className="form-floating mb-3">
-                            <input type="number" name='contact' placeholder='contact' value={adddata.contact} onChange={handleOnChange} className="form-control" id="floatingPassword" />
-                            <label for="floatingPassword">Contact</label>
+                            <input type="number" name='contact' placeholder='contact' value={adddata.contact} onChange={handleOnChange} className="form-control" id="floatingcontact" />
+                            <label for="floatingcontact">Contact</label>
                         </div>
                     </div>
                     <div className='col-md-5'>
                         <div className="form-floating mb-3">
-                            <input type="file" name='image' onChange={handleFileChange} className="form-control" id="floatingPassword" />
-                            <label for="floatingPassword">Image</label>
+                            <input type="file" name='image' onChange={handleFileChange} className="form-control" id="floatingimage" />
+                            <label for="floatingimage">Image</label>
                         </div>
                     </div>
                     <div className='col-md-5'>
                         <div className="form-floating mb-3">
-                            <input type="password" name='password' placeholder='password' value={adddata.password} onChange={handleOnChange} className="form-control" id="floatingPassword" />
-                            <label for="floatingPassword">password</label>
+                            <input type="password" name='password' placeholder='password' value={adddata.password} onChange={handleOnChange} className="form-control" id="floatingconfirm" />
+                            <label for="floatingconfirm">password</label>
                         </div>
                     </div>
 

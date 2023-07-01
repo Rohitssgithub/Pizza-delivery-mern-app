@@ -21,7 +21,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(data)
+    // console.log(data)
     dispatch(userLogin(data))
   }
 
@@ -41,8 +41,8 @@ const Login = () => {
               <label for="floatingPassword">Password</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" name="confirmPassword" value={data.confirmPassword} onChange={onchangeans} class="form-control" id="floatingPassword" placeholder="Password" />
-              <label for="floatingPassword">Confirm Password</label>
+              <input type="password" name="confirmPassword" value={data.confirmPassword} onChange={onchangeans} class="form-control" id="floatingConfirm" placeholder="Password" />
+              <label for="floatingConfirm">Confirm Password</label>
             </div>
             <button className='btn btn-primary px-4' onClick={handleSubmit}>Submit</button>
           </form>

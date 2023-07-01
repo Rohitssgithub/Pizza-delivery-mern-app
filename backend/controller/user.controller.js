@@ -42,7 +42,7 @@ export const signup = async (req, res) => {
                 if (req.file) {
                     fs.unlinkSync(`uploadData/userimage/${userimage}`)
                 }
-                return res.status(403).json({
+                return res.status(400).json({
                     message: 'User already exists'
                 })
             }
@@ -51,7 +51,7 @@ export const signup = async (req, res) => {
                 if (req.file) {
                     fs.unlinkSync(`uploadData/userimage/${userimage}`)
                 }
-                return res.status(403).json({
+                return res.status(400).json({
                     message: 'Password not matching'
                 })
             }
