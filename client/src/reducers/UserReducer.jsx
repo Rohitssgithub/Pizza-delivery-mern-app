@@ -20,9 +20,13 @@ export const registration = createAsyncThunk("addUser", async (formData, { rejec
     // } catch (error) {
     //     return rejectWithValue(error);
     // }
-    const data = await axios.post('http://localhost:9300/user/signup', formData);
-    // console.log(data.data.users)
-    return data
+
+    try {
+        const data = await axios.post('http://localhost:9300/user/signup', formData);
+        return data
+    } catch (error) {
+        return rejectWithValue(error);
+    }
 }
 );
 
@@ -51,7 +55,7 @@ export const fetchAllUsers = createAsyncThunk('showUser', async () => {
 
 export const userLogin = createAsyncThunk("userLogin", async (data, { rejectWithValue }) => {
     console.log(data)
-    const response = await fetch("http://localhost:9300/user/login",
+    const res = await fetch("http://localhost:9300/user/login",
         {
             credentials: 'include',
             method: "POST",
@@ -64,11 +68,17 @@ export const userLogin = createAsyncThunk("userLogin", async (data, { rejectWith
         }
     );
     try {
-        const result = await response.json();
+        const result = await res.json();
         // console.log(result)
-        window.location.href = "/"
-        return result.user;
-    } catch (error) {
+        if (res.status === 400) {
+            alert(result.message)
+        }
+        else {
+            window.location.href = "/"
+            return result.user;
+        }
+    }
+    catch (error) {
         return rejectWithValue(error);
     }
 }

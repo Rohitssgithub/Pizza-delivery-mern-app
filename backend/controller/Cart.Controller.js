@@ -83,26 +83,6 @@ export const addcart = async (req, res) => {
     }
 }
 export const deletedata = async (req, res) => {
-    // try {
-    //     const { productID, userID } = req.body;
-    //     let deletes = await cart.deleteOne({ userID: userID, id: productID })
-    //     if (deletes)
-    //         return res.status(201).json({
-    //             cart: deletes,
-    //             message: 'deleted'
-    //         })
-
-    //     else {
-    //         return res.status(201).json({
-    //             message: 'data not deleted'
-    //         })
-    //     }
-    // }
-    // catch (err) {
-    //     res.status(500).json({
-    //         message: err.message
-    //     })
-    // }
     try {
         const del = await cart.deleteOne({ _id: req.params.id })
         if (del) {
@@ -121,6 +101,7 @@ export const deletedata = async (req, res) => {
         })
     }
 }
+
 export const getCartData = async (req, res) => {
     try {
         const data = await cart.find({ userID: req.params.userID })
@@ -240,6 +221,31 @@ export const decquantity = async (req, res) => {
     }
 }
 
+export const getAllCarts = async (req, res) => {
+    try {
+        const cartData = await cart.find()
+        if (cartData.length == 0) {
+            res.status(400).json({
+                message: "No data found"
+            });
+        }
+        else {
+            res.status(200).json({
+                carts: cartData,
+                total: cartData.length,
+                message: "fetched"
+            })
+        }
+    } catch (error) {
+        res.status(400).json({
+            message: error.message
+        })
+    }
+}
+
+
+
+
 // export const updateCart = async (req, res) => {
 //     try {
 //         const { message, data } = req.body
@@ -305,29 +311,6 @@ export const decquantity = async (req, res) => {
 //         })
 //     }
 // }
-
-
-export const getAllCarts = async (req, res) => {
-    try {
-        const cartData = await cart.find()
-        if (cartData.length == 0) {
-            res.status(400).json({
-                message: "No data found"
-            });
-        }
-        else {
-            res.status(200).json({
-                carts: cartData,
-                total: cartData.length,
-                message: "fetched"
-            })
-        }
-    } catch (error) {
-        res.status(400).json({
-            message: error.message
-        })
-    }
-}
 
 
 

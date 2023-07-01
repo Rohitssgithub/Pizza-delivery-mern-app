@@ -23,7 +23,6 @@ const Login = () => {
     e.preventDefault()
     console.log(data)
     dispatch(userLogin(data))
-    navigate('/')
   }
 
 

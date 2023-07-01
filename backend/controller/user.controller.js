@@ -110,7 +110,7 @@ export const loginuser = async (req, res) => {
         }
         if (password !== confirmPassword) {
             return res.status(400).json({
-                message: "pass and confirmpass not matching",
+                message: "Password and Confirmpass not matching",
             })
         }
         let matchpass = await bcrypt.compare(password, existuser.password);

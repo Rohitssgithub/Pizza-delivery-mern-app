@@ -26,7 +26,6 @@ router.get('/logout/user', userauth, (req, res) => {
     res.clearCookie('jwt', { path: '/' })
     res.status(200).send('user logout')
 })
-// router.get('/all/users', userauth, getAllUsers)
 router.get('/all/users', verifyTokenAndAdmin, getAllUsers)
 
 router.get('/get/user/:id', userData)
