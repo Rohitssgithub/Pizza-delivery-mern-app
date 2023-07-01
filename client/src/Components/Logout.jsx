@@ -9,10 +9,11 @@ const Logout = () => {
 
     useEffect(() => {
         dispatch(userLogOut())
+        navigate('/')
     }, [])
     return (
         <>
-            logout
+            {/* logout */}
         </>
     )
 }

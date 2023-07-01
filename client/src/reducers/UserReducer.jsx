@@ -21,12 +21,8 @@ export const registration = createAsyncThunk("addUser", async (formData, { rejec
     //     return rejectWithValue(error);
     // }
 
-    // try {
     const data = await axios.post('http://localhost:9300/user/signup', formData);
     return data
-    // } catch (error) {
-    // return rejectWithValue(error);
-    // }
 }
 );
 
@@ -96,7 +92,7 @@ export const userLogOut = createAsyncThunk("userLogout", async () => {
         }
     );
     try {
-        window.location.href = "/"
+        // window.location.href = "/"
         const result = await response.json();
         // console.log(result)
         return result;
