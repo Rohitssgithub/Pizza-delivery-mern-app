@@ -92,7 +92,7 @@ export const userLogOut = createAsyncThunk("userLogout", async () => {
         }
     );
     try {
-        // window.location.href = "/"
+        window.location.href = "/"
         const result = await response.json();
         // console.log(result)
         return result;

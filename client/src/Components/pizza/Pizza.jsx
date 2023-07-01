@@ -78,6 +78,7 @@ const Pizza = ({ pizza }) => {
         </div>
       </div>
 
+      
       <Modal
         show={show}
         onHide={handleClose}

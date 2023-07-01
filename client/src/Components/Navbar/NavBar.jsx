@@ -14,14 +14,8 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
     let dispatch = useDispatch()
     const [menuIcon, setMenuIcon] = useState();
-
     let { loginUser } = useSelector((state) => state.users)
-    // console.log(loginUser)
-
-
     const { cartproducts, total, quantity } = useSelector((state) => state.cart)
-
-
     const text = useSelector((state) => state.users.loginstatus)
 
     useEffect(() => {
