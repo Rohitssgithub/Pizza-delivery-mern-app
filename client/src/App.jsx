@@ -26,8 +26,10 @@ import AddUser from './Components/Admin/AddUser';
 import Order from './Components/order/Order';
 import OrderDetail from './Components/order/OrderDetail';
 import AllOrders from './Components/Admin/AllOrders';
-import { Outlet } from 'react-router-dom';
-import AdminNav from './Components/Admin/AdminNav';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const App = () => (
   <>
     <Router>
@@ -80,7 +82,19 @@ const App = () => (
         <Route path='/orderdetail/:id' element={<OrderDetail />} />
       </Routes>
       {/* <Footer></Footer> */}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light" />
     </Router>
+
   </>
 )
 

@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { cartDelete } from '../../reducers/CartReducer'
 import { increaseQuantity, decreaseQuantity } from '../../reducers/CartReducer';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartDisplay = ({ data }) => {
     const dispatch = useDispatch()
@@ -39,7 +41,7 @@ const CartDisplay = ({ data }) => {
                     }}>+</button>}</h6> */}
                     <div className='col-1 main-cart text-center ms-auto mx-2'>
                         <i className="fa-solid fa-trash delete-icon" onClick={() => {
-                            dispatch(cartDelete(data))
+                            dispatch(cartDelete(data)), toast.success("removed")
                         }}></i>
                     </div>
                 </div>

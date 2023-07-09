@@ -13,6 +13,17 @@
     transform: translate(-50%, -50%);
 }
 
-input {
+.main-form input {
     box-shadow: none !important;
+}
+
+.maainp {
+    position: absolute;
+    color: red;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.main-form .form-floating {
+    margin-bottom: 30px !important;
 }

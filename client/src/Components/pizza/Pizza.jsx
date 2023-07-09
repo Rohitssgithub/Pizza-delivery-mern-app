@@ -6,6 +6,9 @@ import { getcart } from '../../reducers/CartReducer';
 import { Link } from 'react-router-dom';
 import './Pizza.css'
 import Modal from 'react-bootstrap/Modal';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Pizza = ({ pizza }) => {
   let dispatch = useDispatch()
@@ -69,7 +72,12 @@ const Pizza = ({ pizza }) => {
           <div className='m-1 w-100'>
             {
               loginUser ? <button className='btn btn-primary add-tocart-btn' onClick={() => {
-                dispatch(addcart({ name: pizza.name, price: pizza.prices[0][varient] * quantity, quantity: quantity, userID: loginUser._id, image: pizza.image, productID: pizza._id, variants: varient }))
+                dispatch(addcart({
+                  name: pizza.name, price: pizza.prices[0][varient] * quantity, quantity: quantity,
+                  userID: loginUser._id, image: pizza.image, productID: pizza._id, variants: varient
+                })),
+                  toast.success('Pizza added to cart!');
+
               }}>ADD TO CART</button>
                 :
                 <button className='btn btn-primary'><Link className='link' to='/login'>Add to cart</Link></button>
@@ -78,7 +86,7 @@ const Pizza = ({ pizza }) => {
         </div>
       </div>
 
-      
+
       <Modal
         show={show}
         onHide={handleClose}
