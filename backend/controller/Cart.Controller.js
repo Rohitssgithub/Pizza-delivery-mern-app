@@ -15,11 +15,9 @@ export const addcart = async (req, res) => {
         console.log(productData)
 
         if (usercartexist !== null) {
-            console.log('ok')
             console.log(variants)
             console.log(usercartexist.variants)
             if (usercartexist.variants == variants) {
-                console.log('ok1')
                 let d = usercartexist.variants;
                 let ds = productData.prices[0][d]
                 usercartexist.quantity += quantity;
