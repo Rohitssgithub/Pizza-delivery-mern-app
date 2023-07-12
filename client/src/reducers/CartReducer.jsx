@@ -80,13 +80,6 @@ export const decreaseQuantity = createAsyncThunk('cart/decrese', async (thunkAPI
 }
 )
 
-// export const updatecart = createAsyncThunk('cart/update', async (thunkAPI) => {
-//     console.log(thunkAPI)
-//     const data = await axios.put("http://localhost:9300/updateCart/" + thunkAPI.data._id, thunkAPI, { withCredentials: true })
-//     console.log(data)
-//     return thunkAPI
-// }
-// )
 
 const cartSlice = createSlice({
     name: "cart",
@@ -103,7 +96,6 @@ const cartSlice = createSlice({
             state.loading = true;
         },
         [getcart.fulfilled]: (state, action) => {
-            // console.log(action.payload.cart)
             state.loading = false;
             if (action.payload.message === "unauthorized") {
                 state.cartproducts = []
@@ -125,17 +117,7 @@ const cartSlice = createSlice({
             console.log(state.cartproducts)
             console.log(action.payload)
             console.log(state.quantity)
-            // state.cartproducts.push(action.payload);
-            // state.loading = false;
-            // state.cartproducts.map((ele) => {
-            //     if (ele._id == action.payload._id) {
-            //         return ele.quantity = action.payload.quantity
-            //     }
-            // })
             state.quantity += action.payload.quantity
-            // state.quantity = state.cartproducts.reduce((acc, num) => acc + Number(num.quantity), 0)
-
-            // state.total += Number(action.payload.price)
         },
         [addcart.rejected]: (state, action) => {
             state.loading = false;
@@ -200,27 +182,7 @@ const cartSlice = createSlice({
             state.loading = false;
             state.error = action.payload;
         },
-        // [updatecart.fulfilled]: (state, action) => {
-        //     if (action.payload.message == "increment") {
-        //         console.log(action.payload)
-        //         state.cartproducts.map((e) => {
-        //             if (e._id == action.payload.data._id) {
-        //                 return e.quantity += 1,
-        //                     e.price += action.payload.data.price
-        //             }
-        //         })
-        //     }
-        //     if (action.payload.message == "decrement") {
-        //         console.log(state.amount)
-        //         state.cartproducts.map((e) => {
-        //             if (e._id == action.payload.data._id) {
-        //                 return e.quantity -= 1,
-        //                     e.price -= action.payload.data.price
-        //             }
-        //         })
-        //     }
-        //     state.total = state.cartproducts.reduce((acc, cr) => acc + Number(cr.price), 0)
-        // }
+     
     },
 });
 
