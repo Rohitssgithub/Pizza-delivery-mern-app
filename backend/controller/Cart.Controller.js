@@ -36,26 +36,6 @@ export const addcart = async (req, res) => {
                     res.status(400).json({ message: "something went wrong" })
                 }
             }
-            // else {
-            //     console.log('ok21')
-
-            //     const add = new cart({
-            //         ...req.body
-            //     })
-            //     const save = add.save()
-
-            //     if (save) {
-            //         return res.status(201).json({
-            //             cart: add,
-            //             message: "successfully updated"
-            //         })
-            //     } else {
-            //         return res.status(400).json({
-            //             message: "something went wrong"
-            //         })
-            //     }
-            // }
-
         }
         else {
             console.log('ok22')
