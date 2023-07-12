@@ -52,14 +52,14 @@ const NavBar = () => {
                                     Home
                                 </NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink
                                     to="/admin"
                                     className="navbar-link"
                                     onClick={() => setMenuIcon(false)}>
                                     Admin
                                 </NavLink>
-                            </li>
+                            </li> */}
                             {
                                 text == 'logged in' ?
                                     <>
